@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+         <modules>
+                <Evobilis_Cartmenu>
+                        <active>true</active>
+                        <codePool>local</codePool>
+                </Evobilis_Cartmenu>
+         </modules>
+</config>

@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<config>
+	<global>
+		<modules>
+                <evobilis_cartmenu>
+                        <version>0.1.0</version>
+                </evobilis_cartmenu>
+        </modules>
+		
+		
+		
+	<blocks>
+            <cartmenu>
+                <rewrite>
+		 <cartmenu>Evobilis_Cartmenu_Block_Cartmenu</cartmenu>
+		</rewrite>
+            </cartmenu>
+	 </blocks>
+	 
+	    <models>
+            <mcartmenu>
+                <class>Evobilis_Cartmenu_Model</class>
+            </mcartmenu>
+    </models>
+
+        </global>
+	   <frontend>
+	   <translate>
+    <modules>
+        <Evobilis_Cartmenu>
+            <files>
+                <default>Evobilis_Cartmenu.csv</default>
+            </files>
+        </Evobilis_Cartmenu>
+    </modules>
+</translate>
+	   
+                <routers>
+                        <cartmenu>
+                                <use>standard</use>
+                                <args>
+                                      <module>Evobilis_Cartmenu</module>
+                                      <frontName>cartmenu</frontName>
+                                </args>
+                        </cartmenu>
+						
+						</routers>
+		<layout>
+			<updates>
+				<cartmenu>
+		   		      <file>cartmenu.xml</file>
+				</cartmenu>
+			</updates>
+       		</layout>
+        </frontend>
+</config>
