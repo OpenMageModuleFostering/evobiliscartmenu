@@ -1,0 +1,71 @@
+.evo-cart-remaining
+{
+	background-color:#404042;
+	color:#FFF;
+	margin-top: -10px;
+	padding-bottom: 10px;
+	padding-right: 10px;
+}
+.evo-cart-links
+{
+	background-color:#404042;
+	color:#FFF;
+	margin-top: -10px;
+	padding-bottom: 10px;
+	padding-right: 10px;
+}
+.evo-cart-delete
+{
+	color:#FFF;
+}
+.evo-cart-qty
+{
+	float:left; color:#B7AC7F;
+	
+}
+.evo-cart-price
+{
+	float:right;color:#B7AC7F;
+}
+.evo-cart-clean
+{
+	clear:both;
+}
+.evo-cart-left
+{
+	float:left;
+}
+.evo-cart-right
+{
+	float:right;width:140px;
+}
+.evo-cart
+{
+	background-color:#404042;
+	width:222px;
+	min-height:50px;
+	padding:5px;
+	color:#FFF;
+	text-align: left;
+	z-index:9999;
+	
+}
+.evo-cart-mycart
+{
+	width:68px;
+	text-align:center;
+	background-color:#404042;
+	padding:5px;
+	float:right;
+	color:#FFF;
+	
+}
+.evo-cart-main
+{
+top: 0; position: absolute;
+}
+
+.evo-cart-main-wrap
+{
+	height: 17px; width: 232px; position: relative;
+}

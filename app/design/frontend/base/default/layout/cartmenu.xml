@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+
+	<layout version="0.1.0">
+
+	
+		<default>
+			
+			<reference name="top.links">
+      			<remove name="checkout_cart_link"/>
+			</reference>
+		
+		<reference name="top.links">
+			<action method="addLink" translate="label title" module="checkout">
+			<label>My Cart</label>
+			<url helper="checkout/getCartUrl"/>
+			<title>My Cart</title>
+			<prepare/>
+			<urlParams/>
+			<position>1</position>
+			<liParams/>
+			<aParams>id="my-cart"</aParams>
+			<beforeText/>
+			<afterText/>
+			</action>
+		</reference>
+		
+		
+		
+		<reference name="head">
+		<block type="cartmenu/cartmenu" name="customcart" template="cartmenu/cartmenu.phtml"/>
+		</reference>
+		
+		<reference name="head">
+            <action method="addItem"><type>skin_css</type><file>css/evo-cart-menu.css</file></action>
+        </reference>
+		
+		
+		</default>
+
+	</layout>

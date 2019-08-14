@@ -1,0 +1,75 @@
+<?
+	$session = Mage::getSingleton('checkout/session');
+	$renderer = new Mage_Checkout_Block_Cart_Item_Renderer();
+	$output = "";
+    $items=$session->getQuote()->getAllItems();
+	$total_items=count($items);
+    $items=array_reverse($items);
+	$i=0;
+	if(!empty($items)){	
+			foreach ($items as $item) {	
+				$i++;	
+				$renderer->setItem($item);
+				$output.='<div><div class="evo-cart-left"><img src="'.Mage::helper('catalog/image')->init($item, 'image')->resize(70).'"/></div>';
+				$output .= '<div class="evo-cart-right"><div>'.str_replace("'",'',$item->getName()) . "</div>";
+				$output .= '<div><div class="evo-cart-qty">Qty '.$item->getQty() . "</div>";
+				$output .= '<div class="evo-cart-price">'.Mage::app()->getLocale()->currency(Mage::app()->getStore()->getCurrentCurrencyCode())->getSymbol().$item->getBaseCalculationPrice() . '<div class="evo-cart-delete"><a href="'.$renderer->getDeleteUrl().'">'.$this->__('Delete').'</a></div></div></div>';
+				$output .= '</div></div><div class="evo-cart-clean">&nbsp;</div>';
+				if($i==3)
+				break;
+			
+			}
+	}
+	else
+	$output.='<div align="center"><BR>'.str_replace("'",'&#39;',$this->__('No items in the cart.')).'</div>';
+	$toHtml='<div class="evo-cart-main-wrap"><div class="evo-cart-main" id="evo-cart-main"><div class="evo-cart">';
+	$toHtml.=$output;
+	$toHtml.='</div>';
+	if($total_items>3){
+	$remaining_items=$total_items-3;
+	$toHtml.='<div class="evo-cart-remaining">You still have '.($remaining_items).' item'.($remaining_items==1?'':'s').' in cart</div>';
+	}
+	$base=Mage::getBaseUrl();
+	$toHtml.='<div class="evo-cart-links"><a href="'.$base.'checkout/cart/">'.$this->__('Check my cart').'</a> | <a href="'.$base.'checkout/onepage/">'.$this->__('Checkout').'</a></div>';
+	$toHtml.='<div class="evo-cart-mycart"><a href="#" onclick="close_cart()" style="margin:0px;">'.$this->__('My Cart').'</a></div></div></div>';
+?>
+
+<script>
+var $j = jQuery.noConflict();
+$j(function() { 
+$j(".links li.first").html('<a href="#" onclick="display_cart()" id="evo-cart-click"><? echo $this->__('My Cart');?></a>');
+});
+
+function close_cart()
+{
+	//$j('.links li.first').css('background','url("http://gm.evobilis.com/skin/frontend/default/default/images/bg-top-buttons.jpg") repeat-x');
+	//$j('.links li.first').css('padding-top','7px');
+	$j('.links li.first').addClass('evo-cart-close');
+	$j(".links li.first").html('<a href="#" onclick="display_cart()"><? echo $this->__('My Cart');?></a>');
+
+
+}
+
+function display_cart() { 
+$j('.links li.first').css('background','none');
+$j('.links li.first').css('padding-top','0px');
+$j(".links li.first").html('<?=$toHtml;?>');
+$j(".links li.first").hide();
+$j(".links li.first").slideDown();
+
+};
+
+
+$j(document).mouseup(function (e)
+{
+    var container = $j(".links");
+
+    if (container.has(e.target).length === 0)
+    {
+        close_cart();
+    }
+});
+
+</script>
+
+

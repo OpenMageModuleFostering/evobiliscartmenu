@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <package>
     <name>evobiliscartmenu</name>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
     <stability>stable</stability>
     <license uri="http://www.evobilis.com">Evobilis</license>
     <channel>community</channel>
@@ -10,9 +10,9 @@
     <description>Display a list of products added to the cart in a drop down menu </description>
     <notes>Display a list of products added to the cart in a drop down menu </notes>
     <authors><author><name>Mahesh</name><user>Mahesh</user><email>mahesh.komarraju@evobilis.com</email></author><author><name>Cyrus</name><user>aumanwai</user><email>cyrus.au@evobilis.com</email></author></authors>
-    <date>2013-02-28</date>
-    <time>04:21:44</time>
-    <contents><target name="magelocal"><dir name="Evobilis"><dir name="Cartmenu"><dir><dir name="Block"><file name="Cartmenu.php" hash="003eb9ffa498041b5c2b071414cee92e"/></dir><dir name="Model"><file name="Cartmenu.php" hash="afc56a4bbe0a5ab8280135db48b4affc"/></dir><dir name="controllers"><file name="IndexController.php" hash="193d28a15b7d50730e0e2ba816899fa1"/></dir><dir name="etc"><file name="config.xml" hash="7acf5074994c4cbc18142d72c73ef7ab"/></dir></dir></dir></dir></target><target name="magedesign"><dir name="frontend"><dir name="base"><dir name="default"><dir name="layout"><file name="cartmenu.xml" hash=""/></dir></dir></dir></dir></target><target name="mageskin"><dir name="frontend"><dir name="base"><dir name="default"><dir name="css"><dir name="evo-cart-menu"><file name="evo-cart-menu.css" hash=""/></dir></dir></dir></dir></dir></target><target name="mageetc"><dir name="modules"><file name="Evobilis_Cartmenu.xml" hash="73ea83e3c562dc184956dcf3c7c19204"/></dir></target></contents>
+    <date>2013-03-03</date>
+    <time>08:53:05</time>
+    <contents><target name="magelocal"><dir name="Evobilis"><dir name="Cartmenu"><dir><dir name="Block"><file name="Cartmenu.php" hash="003eb9ffa498041b5c2b071414cee92e"/></dir><dir name="Model"><file name="Cartmenu.php" hash="afc56a4bbe0a5ab8280135db48b4affc"/></dir><dir name="controllers"><file name="IndexController.php" hash="193d28a15b7d50730e0e2ba816899fa1"/></dir><dir name="etc"><file name="config.xml" hash="7acf5074994c4cbc18142d72c73ef7ab"/></dir></dir></dir></dir></target><target name="magedesign"><dir name="frontend"><dir name="base"><dir name="default"><dir name="layout"><file name="cartmenu.xml" hash="5d4066d0f4477aa182dff18e2c0104e3"/></dir><dir name="template"><dir name="cartmenu"><file name="cartmenu.phtml" hash="ea1a363f0668b594634c92c37a03140e"/></dir></dir></dir></dir></dir></target><target name="mageskin"><dir name="frontend"><dir name="base"><dir name="default"><dir name="css"><file name="evo-cart-menu.css" hash="9649644a5c9a0b04231192aed2a9ba0d"/></dir></dir></dir></dir></target><target name="mageetc"><dir name="modules"><file name="Evobilis_Cartmenu.xml" hash="73ea83e3c562dc184956dcf3c7c19204"/></dir></target></contents>
     <compatible/>
     <dependencies><required><php><min>5.0.0</min><max>5.4.6</max></php></required></dependencies>
 </package>
