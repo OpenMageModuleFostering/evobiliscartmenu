@@ -1,16 +1,19 @@
 {
-    "name": "OpenMageModuleFostering/evobiliscartmenu",
+    "name": "OpenMageModuleFostering\/evobiliscartmenu",
     "type": "magento-module",
     "license": "Evobilis",
     "homepage": "",
     "description": "Display a list of products added to the cart in a drop down menu ",
     "authors": [
-    {
-        "name": "Mahesh",
-        "email": "mahesh.komarraju@evobilis.com"
-    }
-],
+        {
+            "name": "Mahesh",
+            "email": "mahesh.komarraju@evobilis.com"
+        }
+    ],
     "suggest": {
-        "magento-hackathon/magento-composer-installer": "*"
-    }
+        "magento-hackathon\/magento-composer-installer": "*"
+    },
+    "keywords": [
+        "openmage-module"
+    ]
 }
